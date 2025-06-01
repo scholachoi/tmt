@@ -5,6 +5,6 @@ from interview.order.views import OrderListCreateView, OrderTagListCreateView, D
 
 urlpatterns = [
     path('tags/', OrderTagListCreateView.as_view(), name='order-detail'),
-    path('<int:order_id>/deactivate/', DeactivateOrderView.as_view()),
+    path('<int:order_id>/deactivate/', DeactivateOrderView.as_view(), name='order-deactivate'),
     path('', OrderListCreateView.as_view(), name='order-list'),
 ]
